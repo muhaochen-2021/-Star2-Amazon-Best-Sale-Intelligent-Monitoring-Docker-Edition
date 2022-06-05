@@ -1,0 +1,9 @@
+numpy 
+pandas
+psycopg2
+requests
+tqdm
+xlrd
+openpyxl
+bs4
+xlwt

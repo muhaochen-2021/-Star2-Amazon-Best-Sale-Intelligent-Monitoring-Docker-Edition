@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+
+.fl {	float:left;}
+.fr {	float:right;}
+.none{	display:none;}
+
+.inrow{font-size:0;
+    [;font-size:12px;];
+    *font-size:0;font-family:arial;[;letter-spacing:-3px;];*letter-spacing:normal;*word-spacing:-1px;}
+.inrow>li,.inrow span{display:inline-block;*display:inline;*zoom:1;letter-spacing:normal;word-spacing:normal; }
+.flowDay{
+    width:100%;
+    height:32px;
+    text-align:left;
+}
+.flowTotal{
+    width:100%;
+    height:32px;
+    text-align:left;
+}
+ .dataOne{
+     box-sizing: border-box;
+     width:32px;
+     height:32px;
+     margin: 0 2px;
+     border: 1px solid #242c6e;
+     text-align: center;
+ }
+
+.dataBoc {position: relative; width: 100%; height: 100%; overflow: hidden;}
+
+.dataBoc .tt {position: absolute; top: 0;  left: 0; width: 100%;  height: 100%;}
+
+.tt span{width:100%;height:100%; font: 24px/32px "Arial";color:#00b5c3;}
+
+

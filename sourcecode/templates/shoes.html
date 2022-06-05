@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Amazon Best-Sale Monitoring Website  </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='js_e/layui/css/layui.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='js/numbergd/globle.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/show_l2.css')}}">
+</head>
+<body>
+
+<!--header开始-->
+<div class="header">
+    <div class="header_logo fl">
+        <a><img src="{{ url_for('static', filename='img/1.png') }}" ></a>
+    </div>
+    <div class="header_nav fl">
+        <ul>
+            <li>
+                <img src="{{ url_for('static', filename='img/nav_1.png') }}">
+                <a href="{{ url_for('index') }}" class="nav_current">Dashboard</a>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='img/nav_2.png') }}">
+                <a href="{{ url_for('clothing') }}">Clothing</a>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='img/nav_3.png') }}">
+                <a href="{{ url_for('jewelry') }}">Jewelry</a>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='img/nav_4.png') }}">
+                <a href="{{ url_for('shoes') }}">Shoes</a>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='img/nav_5.png') }}">
+                <a href="{{ url_for('watches') }}">Watches</a>
+            </li>
+            <!-- <li>
+                <img src="{{ url_for('static', filename='img/nav_6.png') }}">
+                <a href="http://www.anydo.wang">GoogleSearch</a> -->
+        </ul>
+    </div>
+
+    <div class="header_myself fr">
+        <p>Role: Admin</p>
+    </div>
+
+    <div class="showtime fr">
+        <span id="showTime"></span>
+    </div>
+    <script>
+        var t = null;
+        t = setTimeout(time, 1000); /*開始运行*/
+        function time() {
+            clearTimeout(t); /*清除定时器*/
+            dt = new Date();
+            var y = dt.getFullYear();
+            var mt = dt.getMonth() + 1;
+            var day = dt.getDate();
+            var h = dt.getHours();
+            var m = dt.getMinutes();
+            var s = dt.getSeconds();
+            document.getElementById("showTime").innerHTML = y + "." + mt + "." + day + "  " + h + ":" + m + ":" + s + "";
+            t = setTimeout(time, 1000);
+        }
+    </script>
+</div>
+<!--header结束-->
+    
+
+    <div class="main">
+        <div class="right">
+            <li class="title">Total Sale Detail</li>
+            <div class="itemWrap">
+                <ul class="item">
+                    <li class="comName">企业名称1</li>
+                    <li class="ratio">
+                        <span class="total" title="车辆总数"></span>
+                        <span class="register" title="上线数"></span>
+                        <span class="online" title="在线数"></span>
+                        <span class="totalAmount" title="车辆总数">500</span>
+                    </li>
+                </ul>
+                <ul class="item">
+                    <li class="comName">企业名称1</li>
+                    <li class="ratio">
+                        <span class="total" title="车辆总数"></span>
+                        <span class="register" title="上线数"></span>
+                        <span class="online" title="在线数"></span>
+                        <span class="totalAmount" title="车辆总数">500</span>
+                    </li>
+                </ul>
+                <ul class="item">
+                    <li class="comName">企业名称1</li>
+                    <li class="ratio">
+                        <span class="total" title="车辆总数"></span>
+                        <span class="register" title="上线数"></span>
+                        <span class="online" title="在线数"></span>
+                        <span class="totalAmount" title="车辆总数">500</span>
+                    </li>
+                </ul>
+                <ul class="item">
+                    <li class="comName">企业名称1</li>
+                    <li class="ratio">
+                        <span class="total" title="车辆总数"></span>
+                        <span class="register" title="上线数"></span>
+                        <span class="online" title="在线数"></span>
+                        <span class="totalAmount" title="车辆总数">500</span>
+                    </li>
+                </ul>
+                <ul class="item">
+                    <li class="comName">企业名称1</li>
+                    <li class="ratio">
+                        <span class="total" title="车辆总数"></span>
+                        <span class="register" title="上线数"></span>
+                        <span class="online" title="在线数"></span>
+                        <span class="totalAmount" title="车辆总数">500</span>
+                    </li>
+                </ul>
+                <ul class="item">
+                    <li class="comName">企业名称1</li>
+                    <li class="ratio">
+                        <span class="total" title="车辆总数"></span>
+                        <span class="register" title="上线数"></span>
+                        <span class="online" title="在线数"></span>
+                        <span class="totalAmount" title="车辆总数">500</span>
+                    </li>
+                </ul>
+                <ul class="item">
+                    <li class="comName">企业名称1</li>
+                    <li class="ratio">
+                        <span class="total" title="车辆总数"></span>
+                        <span class="register" title="上线数"></span>
+                        <span class="online" title="在线数"></span>
+                        <span class="totalAmount" title="车辆总数">500</span>
+                    </li>
+                </ul>
+                <ul class="item">
+                    <li class="comName">企业名称1</li>
+                    <li class="ratio">
+                        <span class="total" title="车辆总数"></span>
+                        <span class="register" title="上线数"></span>
+                        <span class="online" title="在线数"></span>
+                        <span class="totalAmount" title="车辆总数">500</span>
+                    </li>
+                </ul>
+                <ul class="item">
+                    <li class="comName">企业名称1</li>
+                    <li class="ratio">
+                        <span class="total" title="车辆总数"></span>
+                        <span class="register" title="上线数"></span>
+                        <span class="online" title="在线数"></span>
+                        <span class="totalAmount" title="车辆总数">500</span>
+                    </li>
+                </ul>
+                <ul class="item">
+                    <li class="comName">企业名称1</li>
+                    <li class="ratio">
+                        <span class="total" title="车辆总数"></span>
+                        <span class="register" title="上线数"></span>
+                        <span class="online" title="在线数"></span>
+                        <span class="totalAmount" title="车辆总数">500</span>
+                    </li>
+                </ul>
+                <ul class="item">
+                    <li class="comName">企业名称1</li>
+                    <li class="ratio">
+                        <span class="total" title="车辆总数"></span>
+                        <span class="register" title="上线数"></span>
+                        <span class="online" title="在线数"></span>
+                        <span class="totalAmount" title="车辆总数">500</span>
+                    </li>
+                </ul>
+                <ul class="item">
+                    <li class="comName">企业名称1</li>
+                    <li class="ratio">
+                        <span class="total" title="车辆总数"></span>
+                        <span class="register" title="上线数"></span>
+                        <span class="online" title="在线数"></span>
+                        <span class="totalAmount" title="车辆总数">500</span>
+                    </li>
+                </ul>
+                <ul class="item">
+                    <li class="comName">企业名称1</li>
+                    <li class="ratio">
+                        <span class="total" title="车辆总数"></span>
+                        <span class="register" title="上线数"></span>
+                        <span class="online" title="在线数"></span>
+                        <span class="totalAmount" title="车辆总数">500</span>
+                    </li>
+                </ul>
+                
+
+            </div>
+        </div>
+        <div class="left">
+            <div class="item-1">
+                <div class="inner">
+                    <div class="block block-1">
+                        <div class="content">
+                            <div class="com">
+                                <ul>
+                                    <li class="symbol"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-company"></use> </svg></li>
+                                    <li class="label">Total Average Sale</li>
+                                    <li class="amount">1563 <span>(户)</span></li>
+                                </ul>
+
+                            </div>
+                            <div class="car">
+                                <ul>
+                                    <li class="symbol"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-car_other_1-copy"></use> </svg></li>
+                                    <li class="label">Average Score</li>
+                                    <li class="amount">624986<span>(辆)</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block block-2">
+                        <div class="content">
+                            <div>
+                                <div class="BOTTOM" id="test3"></div>
+                                <li class="amount"><span>视频车辆</span>&nbsp;3487&nbsp;<span>(辆)</span></li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block block-2">
+                        <div class="content">
+                            <div>
+                                <!--<li class="TOP">报警车辆：<span  class="amount">12,345</span></li>-->
+                                <div class="BOTTOM" id="test4"></div>
+                                <li class="amount"><span>报警车辆</span>&nbsp;3487&nbsp;<span>(辆)</span></li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block block-2">
+                        <div class="content">
+                            <div>
+                                <!--<li class="TOP">上线车辆：<span class="amount">12,345</span> </li>-->
+                                <div class="BOTTOM" id="test5"></div>
+                                <li class="amount"><span>上线车辆</span>&nbsp;3487<span>(辆)</span></li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block block-3">
+                        <div class="content">
+                            <div>
+                                <!--<li class="TOP">在线车辆：<span class="amount">12,345</span> </li>-->
+                                <div class="BOTTOM" id="test6"></div>
+                                <li class="amount"><span>在线车辆</span>&nbsp;3487&nbsp;<span>(辆)</span></li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-2">
+                <div class="block-1">
+                    <li class="title">Sale Count</li>
+                    <div class="inner" id="test2"></div>
+                </div>
+                <div class="block-2">
+                    <li class="title">Total Sale Trend</li>
+                    <div class="inner" id="test1"></div>
+                </div>
+                <div class="block-3">
+                    <div class="inner">
+                        <li class="title">Sale Statistic</li>
+                        <div class="flowCount">
+                            <ul class="firstChild" style="margin-bottom: 12px;">
+                                <li class="flowLabel">
+                                    <span class="symbol"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-day"></use></svg></span>
+                                    <span class="label ">Max Sale：</span>
+                                </li>
+                                <li id="dataNums1" class="flowAmount flowDay"></li>
+                            </ul>
+                            <ul>
+                                <li class="flowLabel">
+                                    <span class="symbol"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-month"></use></svg></span>
+                                    <span class="label">Min Sale：</span>
+                                </li>
+                                <li id="dataNums2" class="flowAmount flowTotal"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="block-4">
+                <div class="inner">
+                    <li class="title">Word Cloud Based On LDA Algorithm</li>
+                    <div class="container" id="test7"></div>
+                </div>
+            </div>
+            <div class="block-5">
+                <div class="inner">
+                    <li class="title">Average Score</li>
+                    <div class="container" id="test8"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- script 开始-->
+    <script src="{{ url_for('static', filename='js_e/jquery.min.js')}}"></script>
+
+    <!-- get l2 name -->
+    <div id="dataid_l2_name" d="{{l2_name}}" style="display:none"></div>
+    <script>
+        window.l2_name_js = document.getElementById('dataid_l2_name').getAttribute('d');
+    </script>
+
+    <script src="{{ url_for('static', filename='js_e/echarts/echarts.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js_e/echarts/echarts-wordcloud.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/main_l2.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/numbergd/num_1.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/numbergd/num_2.js')}}"></script>
+    
+    <!-- generate chart and data  -->
+    <!-- get data -->
+    <div id="dataid_chart3_sale" d="{{chart3_sale}}" style="display:none"></div>
+    <div id="dataid_chart4_score" d="{{chart4_score}}" style="display:none"></div>
+    <div id="dataid_chart5_price" d="{{chart5_price}}" style="display:none"></div>
+    <div id="dataid_chart6_amount" d="{{chart6_amount}}" style="display:none"></div>
+
+    <div id="dataid_chart_2_list_dict" d="{{chart_2_list_dict}}" style="display:none"></div>
+
+    <div id="dataid_chart1_datetime_dict" d="{{chart1_datetime_dict}}" style="display:none"></div>
+    <div id="dataid_chart1_rating_dict" d="{{chart1_rating_dict}}" style="display:none"></div>
+    <div id="dataid_chart1_total_sm_dict" d="{{chart1_total_sm_dict}}" style="display:none"></div>
+
+    <div id="dataid_chart8_datetime_dict" d="{{chart8_datetime_dict}}" style="display:none"></div>
+    <div id="dataid_chart8_rating_dict" d="{{chart8_rating_dict}}" style="display:none"></div>
+
+    <div id="dataid_char_7_word_list" d="{{char_7_word_list}}" style="display:none"></div>
+
+
+    <!-- <script>3456 -->
+    <script>
+        // chart 3
+        var dataid_chart3_sale_js = document.getElementById('dataid_chart3_sale').getAttribute('d');
+        dataid_chart3_sale_js = parseInt(dataid_chart3_sale_js)
+        chart_3(dataid_chart3_sale_js)
+        $('.amount').eq(2).text(l2_name_js+"    "+"sale"+":    "+dataid_chart3_sale_js);
+        $('.amount').eq(0).text(dataid_chart3_sale_js+"   "+"units");
+
+        // chart 4
+        var dataid_chart4_score_js = document.getElementById('dataid_chart4_score').getAttribute('d');
+        dataid_chart4_score_js = parseFloat(dataid_chart4_score_js)
+        chart_4(dataid_chart4_score_js)
+        $('.amount').eq(3).text(l2_name_js+"    "+"score"+":    "+dataid_chart4_score_js);
+        $('.amount').eq(1).text(dataid_chart4_score_js+"   "+"score");
+
+        // chart 5
+        var dataid_chart5_price_js = document.getElementById('dataid_chart5_price').getAttribute('d');
+        dataid_chart5_price_js = parseFloat(dataid_chart5_price_js)
+        chart_5(dataid_chart5_price_js)
+        $('.amount').eq(4).text(l2_name_js+"    "+"price"+":    "+dataid_chart5_price_js);
+
+        // chart 6
+        var dataid_chart6_amount_js = document.getElementById('dataid_chart6_amount').getAttribute('d');
+        dataid_chart6_amount_js = parseFloat(dataid_chart6_amount_js)
+        chart_6(dataid_chart6_amount_js)
+        $('.amount').eq(5).text(l2_name_js+"    "+"price"+":    "+dataid_chart6_amount_js);
+    </script>
+
+    <!-- <script>2 -->
+    <script>
+        var dataid_chart_2_list_dict_js = document.getElementById('dataid_chart_2_list_dict').getAttribute('d');
+        chart_2(dataid_chart_2_list_dict_js)
+    </script>
+    
+    <!- flask 传值 给 wordchart ->
+
+    // word_chart
+    <script src='https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js'></script>
+    <script src="{{ url_for('static', filename='js_e/echarts/echarts-wordcloud.js')}}"></script>
+    <script>
+        var dataid_char_7_word_list_js = document.getElementById('dataid_char_7_word_list').getAttribute('d');
+        chart_7(dataid_char_7_word_list_js)
+    </script>
+
+
+    <!- flask 传值 给 lstmpre ->
+
+    // lstm pre
+    <script>
+        var dataid_chart1_datetime_dict_js = document.getElementById('dataid_chart1_datetime_dict').getAttribute('d');
+        var chart1_rating_dict_js = document.getElementById('dataid_chart1_rating_dict').getAttribute('d');
+        var dataid_chart1_total_sm_dict_js = document.getElementById('dataid_chart1_total_sm_dict').getAttribute('d');
+        chart_1(dataid_chart1_datetime_dict_js,chart1_rating_dict_js)
+    </script>
+
+    // max min data
+    <script>
+        // dic_pred_cur_js
+        var obj_dic_pred_cur_js = eval("(" + chart1_rating_dict_js + ")");
+        var arr_dic_pred_cur_js = []
+        for (var key in obj_dic_pred_cur_js) {
+            var item = obj_dic_pred_cur_js[key];
+            arr_dic_pred_cur_js.push(item)
+            }
+        arr_dic_pred_cur_js.sort()
+
+        
+        $("#dataNums1").rollNum({
+            deVal: arr_dic_pred_cur_js[arr_dic_pred_cur_js.length-1]
+        });
+        $("#dataNums2").rollNum({
+            deVal: arr_dic_pred_cur_js[0]
+        });
+    </script>
+
+    // 列表数据
+    <script>
+        // dic_pred_time_js
+        var obj_dic_pred_time_js = eval("(" + dataid_chart1_datetime_dict_js + ")");
+        var arr_dic_pred_time_js = []
+        for (var key in obj_dic_pred_time_js) {
+            var item = obj_dic_pred_time_js[key];
+            arr_dic_pred_time_js.unshift(item)
+            }
+
+        // dic_pred_pre_js
+        var obj_dic_pred_pre_js = eval("(" + chart1_rating_dict_js + ")");
+        var arr_dic_pred_pre_js = []
+        for (var key in obj_dic_pred_pre_js) {
+            var item = obj_dic_pred_pre_js[key];
+            arr_dic_pred_pre_js.unshift(item)
+            }
+
+        // dic_pred_pre_js
+        var obj_dic_pred_pre_js = eval("(" + dataid_chart1_total_sm_dict_js + ")");
+        var total_sm_list_js = []
+        for (var key in obj_dic_pred_pre_js) {
+            var item = obj_dic_pred_pre_js[key];
+            total_sm_list_js.unshift(item)
+            }
+
+        var data = {
+            total: arr_dic_pred_pre_js,
+            time_name: arr_dic_pred_time_js,
+            total_sm: total_sm_list_js
+        };
+        $('.comName').each(function(m, n) {
+            $('.comName').eq(m).text(data.time_name[m])
+        });
+        $('.totalAmount').each(function(m, n) {
+            $('.totalAmount').eq(m).text(data.total[m])
+        });
+        $('.total').each(function(m, n) {
+            $('.total').eq(m).animate({
+                'width': data.total_sm[m]
+            });
+            $('.total').eq(m).text(data.total[m]);
+        });
+        $('.register').each(function(m, n) {
+            $('.register').eq(m).animate({
+                'width': data.total_sm[m]
+            });
+        });
+        $('.online').each(function(m, n) {
+            $('.online').eq(m).animate({
+                'width': data.total_sm[m]
+            });
+        })
+    </script>
+
+    // lstm pre
+    <script>
+        var dataid_chart8_datetime_dict_js = document.getElementById('dataid_chart8_datetime_dict').getAttribute('d');
+        var dataid_chart8_rating_dict_js = document.getElementById('dataid_chart8_rating_dict').getAttribute('d');
+        chart_8(dataid_chart8_datetime_dict_js,dataid_chart8_rating_dict_js)
+    </script>
+
+
+
+    <script src="http://at.alicdn.com/t/font_610679_r9naue0mmo.js"></script>
+</body>
+
+</html>
